@@ -65,8 +65,6 @@ int main()
 
                 std::cout << "\nOpção inválida!" << std::endl;
                 break;
-                return 0;
-
         }
         std::cout << "\nDeseja fazer outra conversão? (S para sim e N para não)" << std::endl;
         std::cin >> resposta;
