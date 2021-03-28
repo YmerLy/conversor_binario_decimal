@@ -1,3 +1,6 @@
+// Copyright(c) 2021, Jonas Afonso.
+// Reference W3School / Professor Marcos Pacheco Curso: Aprendendo programa√ß√£o b√°sica e avan√ßada com Linguagem C++ / F√≥rum CPLUSPLUS.COM
+
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
@@ -13,29 +16,29 @@ int main()
     int auxiliar, bdecimal = 0, sequencial;
     int dbinario[8];
 
-    do //O cÛdigo ir· fazer atÈ o usu·rio permitir
+    do //O c√≥digo ir√° fazer at√© o usu√°rio permitir
     {
-        std::cout << "\nQual conversor ir· utilizar?\n";
-        std::cout << "1 - Bin·rio para Decimal\n";
-        std::cout << "2 - Decimal - Bin·rio \n";
+        std::cout << "\nQual conversor ir√° utilizar?\n";
+        std::cout << "1 - Bin√°rio para Decimal\n";
+        std::cout << "2 - Decimal - Bin√°rio \n";
         std::cout << "\nResposta: ";
         std::cin >> escolha;
 
-        switch(escolha){ // O switch serve para pegar a escolha do usu·rio e apresentar o que foi escolhido
+        switch(escolha){ // O switch serve para pegar a escolha do usu√°rio e apresentar o que foi escolhido
 
             case 1:
 
-                std::cout << "\nQual È o valor em bin·rio: ";
+                std::cout << "\nQual √© o valor em bin√°rio: ";
                 std::cin >> entrada;
 
                 auxiliar = entrada; // auxiliar serve para guardar o numero digitado pelo usuario e apresentar no final
-                for(sequencial = 0; entrada > 0; sequencial++) // FOR (inicializaÁ„o | condiÁ„o | incremento)
+                for(sequencial = 0; entrada > 0; sequencial++) // FOR (inicializa√ß√£o | condi√ß√£o | incremento)
                 {
                     bdecimal = bdecimal + pow(2, sequencial)*(entrada % 10);
                     entrada /= 10;
                 }
 
-                std::cout << "\nO valor " << auxiliar << " em decimal È: " << bdecimal;
+                std::cout << "\nO valor " << auxiliar << " em decimal √©: " << bdecimal;
 
                 break;
 
@@ -50,9 +53,9 @@ int main()
                         entrada /= 2;
                     }
 
-                    std::cout << "\nO valor " << auxiliar << " em bin·rio È: ";
+                    std::cout << "\nO valor " << auxiliar << " em bin√°rio √©: ";
 
-                    for(sequencial = sequencial - 1; sequencial >= 0; sequencial--)
+                    for(sequencial = sequencial - 1; sequencial >= 0; sequencial--) //serve para organizar o bin√°rio
                     {
                      std::cout << dbinario[sequencial];
                     }
@@ -60,12 +63,12 @@ int main()
 
             default:
 
-                std::cout << "\nOpÁ„o inv·lida!" << std::endl;
+                std::cout << "\nOp√ß√£o inv√°lida!" << std::endl;
                 break;
                 return 0;
 
         }
-        std::cout << "\nDeseja fazer outra convers„o? (S para sim e N para n„o)" << std::endl;
+        std::cout << "\nDeseja fazer outra convers√£o? (S para sim e N para n√£o)" << std::endl;
         std::cin >> resposta;
     }while (resposta == 'S' || resposta == 's');
 
